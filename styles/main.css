@@ -172,8 +172,8 @@ input {
   width: 40px;
   height: 4px;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background: #FA5652;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -209,15 +209,15 @@ input {
 .icon.active .hamburger:before {
   top: 0;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .icon.active .hamburger:after {
   top: 0;
   -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .mobile-visible {
@@ -1166,6 +1166,23 @@ input {
 @media screen and (max-width: 480px) {
 
   /*header*/
+
+  .header-description__word {
+    font-size: 25px;
+  }
+
+  .heaer-heading {
+    font-size: 35px;
+  }
+
+  .header-description__text {
+    font-size: 18px;
+  }
+
+  .btn-header {
+    font-size: 20px;
+  }
+
   .mobile_hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1215,16 +1232,37 @@ input {
   }
 
   /*about us*/
+  .about-us__modifier {
+      font-size: 25px;
+  }
+  
   .about-us_text {
     padding-top: 2rem;
     text-align: center;
+  }
+
+  .about-us__heading {
+    font-size: 35px;
   }
 
   .about-us__block {
     background-position: 5rem 31rem, 16rem 33rem;
   }
 
+  .about-us__description {
+     font-size: 18px;
+  }
+
   /*contagion*/
+
+  .contagion-modifier {
+    font-size: 25px;
+  }
+
+  .contagion-heading {
+    font-size: 35px;
+  }
+  
   .contagion-central__part {
     padding-top: 5rem;
   }
@@ -1249,9 +1287,29 @@ input {
     margin-right: 1rem;
   }
 
+  .contagion-air__heading {
+    font-size: 30px;
+  }
+
+  .contagion-human__heading {
+    font-size: 30px;
+  }
+
+  .contagion-objects__heading {
+    font-size: 30px;
+  }
+
   /*symptomps*/
   .symptomps-central__part {
     padding-top: 5rem;
+  }
+
+  .symptomps-modifier {
+    font-size: 25px;
+  }
+
+  .symptomps-heading {
+    font-size: 35px;
   }
 
   .symptomps-description {
@@ -1269,6 +1327,14 @@ input {
     background-position: 0px 82rem, 15rem 83rem, 16rem 205rem;
   }
 
+  .what-should__modifier {
+    font-size: 25px;
+  }
+
+  .what-should__heading {
+    font-size: 35px;
+  }
+
   .what-should__description {
     padding-left: 0rem;
     padding-right: 0rem;
@@ -1276,9 +1342,25 @@ input {
     margin-bottom: 2rem;
   }
 
+  .wear-mask__heading {
+    font-size: 35px;
+  }
+
+  .wash-hands__heading {
+    font-size: 35px;
+  }
+
+  .use-nose__heading {
+    font-size: 35px;
+  }
+
+  .avoid-contact__heading {
+    font-size: 35px;
+  }
+
   .what-should__container {
     display: block;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     text-align: center;
   }
 
@@ -1366,19 +1448,29 @@ input {
     display: block;
   }
 
+  .list-country {
+    font-size: 25px;
+  }
+
   .live-reports__heading {
     text-align: center;
+    font-size: 35px;
   }
-  
+
   /*subscribe*/
+  
   .subscribe-heading {
     padding-left: 0rem;
     padding-right: 0rem;
-    font-size: 50px;
+    font-size: 35px;
   }
 
   .subscribe-block {
     padding-top: 15rem;
+  }
+
+  .send-submit__btn {
+     font-size: 20px;
   }
 
   .subscribe-form__wrapper {
@@ -1433,4 +1525,3 @@ input {
     height: 48px;
   }
 }
-
