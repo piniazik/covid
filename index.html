@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="description" content="Covid-19">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Covid-19">
+    <meta property="og:description" content="Covid-19">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Covid-19">
+    <meta name="robots" content="follow, index">
+    <meta name="twitter:description" content="Covid-19">
+    <meta name="twitter:title" content="Covid-19">
+    <meta name="keywords" content="Covid-19">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/fontawesome.css">
+    <link rel="icon" href="images/Group-3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Covid-19</title>
+</head>
+
+<body>
+    <!--load site-->
+    <div id="myPreloader" class="wrap-myLoader">
+        <div class="myLoader"></div>
+    </div>
+    <!--header-->
+    <header class="header-main">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-main__logo wow fadeInUp" data-wow-duration="1.5s"
+                    data-wow-delay="1s"><img data-src="images/Group-3.png" alt="logo" class="img-main__logo lazyload"
+                        loading="lazy">Covid-19</a>
+                <ul class="nav-main">
+                    <li class="nav-main__item"><a href="#overview" class="nav-main__link wow fadeInUp"
+                            data-wow-duration="1.5s" data-wow-delay="1s">Overview</a></li>
+                    <li class="nav-main__item"><a href="#contagion" class="nav-main__link wow fadeInUp"
+                            data-wow-duration="1.5s" data-wow-delay="1s">Contagion</a></li>
+                    <li class="nav-main__item"><a href="#symptoms" class="nav-main__link wow fadeInUp"
+                            data-wow-duration="1.5s" data-wow-delay="1s">Symptoms</a></li>
+                    <li class="nav-main__item"><a href="#prevention" class="nav-main__link wow fadeInUp"
+                            data-wow-duration="1.5s" data-wow-delay="1s">Prevention</a></li>
+                    <li class="nav-main__btn"><a href="#contact" class="nav-main__link_btn wow fadeInUp"
+                            data-wow-duration="1.5s" data-wow-delay="1s">Contact</a></li>
+                </ul>
+            </div>
+            <!--mobile hamburger open-->
+            <div class="menu-toggle icon">
+                <div class="hamburger"></div>
+            </div>
+            <ul class="menu nav__lists nav__list--column">
+                        <a href="index.html" class="nav-main__logo wow fadeInUp" data-wow-duration="1.5s"
+                    data-wow-delay="1s"><img data-src="images/Group-3.png" alt="logo" class="img-main__logo lazyload"
+                        loading="lazy">Covid-19</a>
+                <li class="nav-main__item"><a href="#overview" class="nav-main__link wow fadeInUp"
+                        data-wow-duration="1.5s" data-wow-delay="1s">Overview</a></li>
+                <li class="nav-main__item"><a href="#contagion" class="nav-main__link wow fadeInUp"
+                        data-wow-duration="1.5s" data-wow-delay="1s">Contagion</a></li>
+                <li class="nav-main__item"><a href="#symptoms" class="nav-main__link wow fadeInUp"
+                        data-wow-duration="1.5s" data-wow-delay="1s">Symptoms</a></li>
+                <li class="nav-main__item"><a href="#prevention" class="nav-main__link wow fadeInUp"
+                        data-wow-duration="1.5s" data-wow-delay="1s">Prevention</a></li>
+                <li class="nav-main__btn"><a href="#contact" class="nav-main__link_btn wow fadeInUp"
+                        data-wow-duration="1.5s" data-wow-delay="1s">Contact</a></li>
+            </ul>
+            <!--mobile hamburger close-->
+            <div class="header-text__block row">
+                <div class="col-lg-6 col-md-6 col-sm-6 header-main__text">
+                    <span class="header-description__word wow fadeInUp" data-wow-duration="1.5s"
+                        data-wow-delay="1s">COVID-19 Alert</span>
+                    <h1 class="heaer-heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Stay At Home
+                        Quarantine To Stop Corona Virus</h1>
+                    <p class="header-description__text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">There
+                        is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need
+                        supportive care to.</p>
+                    <a href="index.html" class="btn-header wow fadeInUp" data-wow-duration="1.5s"
+                        data-wow-delay="1s">Let Us Help</a>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 header-main__images">
+                    <img data-src="images/Illustration-01.png" alt="girl" class="header-images wow fadeInUp lazyload"
+                        data-wow-duration="1.5s" data-wow-delay="1s" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--main-->
+    <main class="main-part">
+        <!--about us block-->
+        <div class="about-us__block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 about-us_images">
+                        <img data-src="images/Group-15404.png" alt="about us images"
+                            class="about-us__picture wow fadeInUp lazyload" data-wow-duration="1.5s" data-wow-delay="1s"
+                            loading="lazy">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 about-us_text" id="overview">
+                        <span class="about-us__modifier wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">What
+                            is Codvid-19</span>
+                        <h2 class="about-us__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Coronavirus</h2>
+                        <p class="about-us__description wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Corona viruses are a type of virus.
+                            There are many different kinds, and some cause disease.
+                            A newly identified type has caused a recent outbreak of respiratory illness now called
+                            COVID-19.
+                            Lauren Sauer, M.S., the director of operations with the Johns Hopkins
+                            Office of Critical Event Preparedness and Response</p>
+                        <a href="index.html" class="about-us__btn wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--contagion block-->
+        <div class="contagion__block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 contagion-central__part" id="contagion">
+                        <span class="contagion-modifier wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Covid-19</span>
+                        <h2 class="contagion-heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Contagion</h2>
+                        <p class="contagion-description wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Corona viruses are a type of virus.
+                            There are many different kinds, and some cause disease.
+                            A newly identified type</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 contagion-air">
+                        <img data-src="images/Group-18544.png" alt="contagion air"
+                            class="contagion-air__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                            data-wow-delay="1s" loading="lazy">
+                        <h3 class="contagion-air__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Air
+                            Transmission</h3>
+                        <p class="contagion-air__description wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 contagion-human">
+                        <img data-src="images/Group-18542.png" alt="contagion human"
+                            class="contagion-human__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                            data-wow-delay="1s" loading="lazy">
+                        <h3 class="contagion-human__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Human Contacts</h3>
+                        <p class="contagion-human__description wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Washing your hands is one of thesimplest ways you can protect</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 contagion-objects">
+                        <img data-src="images/Group-18540.png" alt="contagion objects"
+                            class="contagion-objects__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                            data-wow-delay="1s" loading="lazy">
+                        <h3 class="contagion-objects__heading wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Containted Objects</h3>
+                        <p class="contagion-objects__description wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Use the tissue while sneezing,In this way, you can protect your
+                            droplets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--symptomps block-->
+        <div class="symptomps-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 symptomps-central__part" id="symptoms">
+                        <span class="symptomps-modifier wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Covid-19</span>
+                        <h2 class="symptomps-heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Symptoms
+                        </h2>
+                        <p class="symptomps-description wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Corona viruses are a type of virus.
+                            There are many different kinds, and some cause disease.
+                            A newly identified type has caused a recent outbreak of respiratory </p>
+                        <img data-src="images/Group-15442.png" alt="symptomps"
+                            class="symptomps-images wow fadeInUp lazyload" data-wow-duration="1.5s" data-wow-delay="1s"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--what should we do block-->
+        <div class="what-should__block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 co-sm-3 what-should__heading" id="prevention">
+                        <span class="what-should__modifier wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay="1s">Covid-19</span>
+                        <h2 class="what-should__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">What
+                            Should We Do</h2>
+                        <p class="what-should__description wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            Corona viruses are a type of virus.
+                            There are many different kinds, and some cause disease.
+                            A newly identified type has caused</p>
+                    </div>
+                    <div class="what-should__container">
+                        <img data-src="images/Group-18548.png" alt="wear mask"
+                            class="wear-mask__icon wow fadeInUp lazyload" data-wow-duration="1.5s" data-wow-delay="1s"
+                            loading="lazy">
+                        <div class="col-lg-5 col-md-5 col-sm-3 wear-mask__part">
+                            <h2 class="wear-mask__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                Wear Masks</h2>
+                            <p class="wear-mask__text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                Continually seize impactful vortals rather than future-proof supply chains.
+                                Uniquely exploit emerging niches via fully tested meta-services.
+                                Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the
+                                box" thinking.
+                                Objectively </p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-3 wear-mask__part">
+                            <img data-src="images/Mask.png" alt="wear mask"
+                                class="wear-mask__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                data-wow-delay="1s" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="what-should__container">
+                        <div class="col-lg-5 col-md-5 col-sm-3 wash-hands__part">
+                            <img data-src="images/Mask-girl.png" alt="wash hands"
+                                class="wash-hands__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                data-wow-delay="1s" loading="lazy">
+                        </div>
+                        <img data-src="images/Group-18549.png" alt="wash hands"
+                            class="wash-hands__icon wow fadeInUp lazyload" data-wow-duration="1.5s" data-wow-delay="1s"
+                            loading="lazy">
+                        <div class="col-lg-5 col-md-5 col-sm-3 wash-hands__part">
+                            <h2 class="wash-hands__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                Wash Your Hands</h2>
+                            <p class="wash-hands__text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                Continually seize impactful vortals rather than future-proof supply chains.
+                                Uniquely exploit emerging niches via fully tested meta-services.
+                                Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the
+                                box" thinking.
+                                Objectively Continually seize impactful vortals</p>
+                        </div>
+                    </div>
+                    <div class="what-should__container">
+                        <img data-src="images/Group-18550.png" alt="use nose-rag"
+                            class="use-nose__icon wow fadeInUp lazyload" data-wow-duration="1.5s" data-wow-delay="1s"
+                            loading="lazy">
+                        <div class="col-lg-5 col-md-5 col-sm-3 use-nose__part">
+                            <h2 class="use-nose__heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Use
+                                Nose - Rag</h2>
+                            <p class="use-nose__text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                Continually seize impactful vortals rather than future-proof supply chains.
+                                Uniquely exploit emerging niches via fully tested meta-services.
+                                Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the
+                                box" thinking.
+                                Objectively</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-3 use-nose__part">
+                            <img data-src="images/Group--15454.png" alt="use nose-rag"
+                                class="use-nose__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                data-wow-delay="1s" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="what-should__container">
+                        <div class="col-lg-5 col-md-5 col-sm-3 avoid-contact__part">
+                            <img data-src="images/Girl-cat.png" alt="avoid contact"
+                                class="avoid-contact__images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                data-wow-delay="1s" loading="lazy">
+                        </div>
+                        <img data-src="images/Group-18566.png" alt="avoid contact"
+                            class="avoid-contact__icon wow fadeInUp lazyload" data-wow-duration="1.5s"
+                            data-wow-delay="1s" loading="lazy">
+                        <div class="col-lg-5 col-md-5 col-sm-3 avoid-contact__part">
+                            <h2 class="avoid-contact__heading wow fadeInUp" data-wow-duration="1.5s"
+                                data-wow-delay="1s">Avoid Contacts</h2>
+                            <p class="avoid-contact__text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                Continually seize impactful vortals rather than future-proof supply chains.
+                                Uniquely exploit emerging niches via fully tested meta-services.
+                                Competently pursue standards compliant leadership skills vis-a-vis pandemic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--map block-->
+        <div class="wrapper-bg">
+            <div class="map-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 map-wrapper">
+                              <h2 class="live-reports__heading mobile-visible wow fadeInUp" data-wow-duration="1.5s"
+                                    data-wow-delay="1s">Live Reports</h2>
+                            <div class="col-lg-6 col-md-6 col-sm-6 map-box__container">
+                                <div class="map-box" id='map'></div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 live-reports__country">
+                                <h2 class="live-reports__heading mobile-none wow fadeInUp" data-wow-duration="1.5s"
+                                    data-wow-delay="1s">Live Reports</h2>
+                                <ul class="list-country">
+                                    <li class="item-countries"><img data-src="images/Group-87.png" alt="usa"
+                                            class="country-images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                            data-wow-delay="1s" loading="lazy">USA <i class="fa fa-ambulance"
+                                            aria-hidden="true"></i> <span class="counter-number__one"></span></li>
+                                    <li class="item-countries"><img data-src="images/Group-88.png" alt="italy"
+                                            class="country-images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                            data-wow-delay="1s" loading="lazy">Italy <i class="fa fa-ambulance"
+                                            aria-hidden="true"></i> <span class="counter-number__two"></span></li>
+                                    <li class="item-countries"><img data-src="images/Group-80.png" alt="china"
+                                            class="country-images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                            data-wow-delay="1s" loading="lazy">China <i class="fa fa-ambulance"
+                                            aria-hidden="true"></i> <span class="counter-number__three"></span></li>
+                                    <li class="item-countries"><img data-src="images/Group-89.png" alt="spain"
+                                            class="country-images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                            data-wow-delay="1s" loading="lazy">Spain <i class="fa fa-ambulance"
+                                            aria-hidden="true"></i> <span class="counter-number__four"></span></li>
+                                    <li class="item-countries"><img data-src="images/Group-90.png" alt="germany"
+                                            class="country-images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                            data-wow-delay="1s" loading="lazy">Germany <i class="fa fa-ambulance"
+                                            aria-hidden="true"></i> <span class="counter-number__five"></span></li>
+                                    <li class="item-countries"><img data-src="images/Group-91.png" alt="iran"
+                                            class="country-images wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                            data-wow-delay="1s" loading="lazy">Iran <i class="fa fa-ambulance"
+                                            aria-hidden="true"></i> <span class="counter-number__six"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--subscribe block-->
+            <div class="subscribe-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-3 subscribe-wrapper" id="contact">
+                            <h2 class="subscribe-heading wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Have
+                                Question in mind? Let us help you</h2>
+                            <div class="subscribe-form__wrapper">
+                                <form class="form-main__send wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                                    <input class="subscribee-mail wow fadeInUp" data-wow-duration="1.5s"
+                                        data-wow-delay="1s" type="text" placeholder="snmonydemo@gmail.com">
+                                    <button class="send-submit__btn wow fadeInUp" data-wow-duration="1.5s"
+                                        data-wow-delay="1s">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <div class="footer-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 footer-wrapper">
+                    <div class="nav-container__footer">
+                        <a href="index.html" class="nav-footer__logo"><img data-src="images/Group-3.png" alt="logo"
+                                class="img-footer__logo wow fadeInUp lazyload" data-wow-duration="1.5s"
+                                data-wow-delay="1s" loading="lazy">Covid-19</a>
+                        <ul class="nav-footer">
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s">Overview</a></li>
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s">Symptoms</a></li>
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s">Prevention</a></li>
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s">Treatment</a></li>
+                        </ul>
+                    </div>
+                    <!--social navigation block-->
+                    <div class="social-nav__footer">
+                        <ul class="nav-footer__social">
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s"><img
+                                        data-src="images/facebook-footer.png" alt="social icon"
+                                        class="footer-social__images lazyload" loading="lazy"></a></li>
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s"><img
+                                        data-src="images/youtube-footer.png" alt="social icon"
+                                        class="footer-social__images lazyload" loading="lazy"></a></li>
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s"><img data-src="images/footer.png"
+                                        alt="social icon" class="footer-social__images lazyload" loading="lazy"></a>
+                            </li>
+                            <li class="nav-footer__item"><a href="index.html" class="nav-footer__link wow fadeInUp"
+                                    data-wow-duration="1.5s" data-wow-delay="1s"><img
+                                        data-src="images/twitter-footer.png" alt="social icon"
+                                        class="footer-social__images lazyload" loading="lazy"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="author-wrapper">
+                <span class="author wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">2021&copy; Piniazik
+                    A.A.</span>
+            </div>
+        </div>
+    </div>
+    <!-- begin back to top button -->
+    <div class="footer-btn_up"></div>
+    <a class="back_to_top" title="Up">&uarr;</a>
+    <!-- end back to top button -->
+    <script src="script/jquery.js"></script>
+    <script async src="script/lazysizes.min.js"></script>
+    <script async src="script/main.js"></script>
+    <script src="script/wow.js"></script>
+</body>
+
+</html>
