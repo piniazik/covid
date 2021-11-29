@@ -220,6 +220,10 @@ input {
           transform: rotate(135deg);
 }
 
+.mobile-visible {
+  display: none;
+}
+
 /*hamburger menu close*/
 
 .nav-main {
@@ -1356,6 +1360,10 @@ input {
 
   .mobile-none {
     display: none;
+  }
+
+  .mobile-visible {
+    display: block;
   }
 
   .live-reports__heading {
