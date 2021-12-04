@@ -82,12 +82,11 @@ input {
 img {
   vertical-align: middle;
 }
+
 body {
   overflow-x: hidden;
-}
-
-html {
-  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .row.g_30 {
@@ -604,6 +603,10 @@ video {
 /*--------------------------------*/
 /*main*/
 /*about us*/
+.about-us_images {
+  overflow-x: hidden;
+}
+
 .about-us__block {
   background-image: url(../images/path1470-about.png), url(../images/path1471-about.png);
   background-repeat: no-repeat, no-repeat;
