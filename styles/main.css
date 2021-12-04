@@ -1633,6 +1633,7 @@ video {
   }
 
   .about-us__img {
+    display: none;
     max-width: 70%;
   }
 
