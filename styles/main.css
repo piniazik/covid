@@ -82,6 +82,9 @@ input {
 img {
   vertical-align: middle;
 }
+body {
+  overflow-x: hidden;
+}
 
 .row.g_30 {
   margin-left: -15px;
