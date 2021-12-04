@@ -1,5 +1,4 @@
 //button up
-
 (function () {
   function trackScroll() {
     var scrolled = window.pageYOffset;
@@ -27,7 +26,6 @@
 })();
 
 //smooth scroll for anchors
-
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
   smoothLink.addEventListener('click', function (e) {
@@ -42,7 +40,6 @@ for (let smoothLink of smoothLinks) {
 };
 
 //btn overlay content 
-
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
@@ -52,7 +49,6 @@ function off() {
 }
 
 //site loading
-
 document.body.onload = function () {
   setTimeout(function () {
     var preloader = document.getElementById('myPreloader');
@@ -64,11 +60,9 @@ document.body.onload = function () {
 
 
 //wow.js initialization
-
 new WOW().init();
 
 // mapbox
-
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYWxleC1qZXN1cyIsImEiOiJja3UyenZwOGQxMDE3MnhvMWtxcWU0MmlqIn0.IqIyQcpkLuN7gk0HjxCTAQ';
 var map = new mapboxgl.Map({
@@ -153,7 +147,6 @@ const marker6 = new mapboxgl.Marker({
   .addTo(map);
 
 //lazyload images
-
 (async () => {
   if ('loading' in HTMLImageElement.prototype) {
     const images = document.querySelectorAll('img.lazyload');
@@ -167,7 +160,6 @@ const marker6 = new mapboxgl.Marker({
 })();
 
 //counter
-
 let blockTop = $('.subscribe-wrapper').offset().top, 
   wh = window.innerHeight;
   flagOne = true,
@@ -292,7 +284,6 @@ let blockTop = $('.subscribe-wrapper').offset().top,
      });
 
 //hamburger menu
-
 $(document).ready(function(){
   $('.menu-toggle').click(function(){
     $(this).toggleClass("active");
@@ -303,3 +294,64 @@ $(document).ready(function(){
     });
   });
 });
+
+
+//pop up
+$('.js-btn').click(function(){
+  $('.js-overlay').fadeIn();
+   $('.js-overlay').addClass('disabled');
+});
+
+$('.js-close').click(function(){
+    $('.js-overlay').fadeOut();
+});
+
+$(document).mouseup(function(e){
+  let popup = $('.js-popup');
+   if (e.target != popup[0] && popup.has(e.target).length === 0) {
+        $('.js-overlay').fadeOut();
+   }
+});
+
+
+//sending mail
+$(document).ready(function sendingMail(){
+  $('#mail-btn__js').click(function clickMail(){
+    let recipient = "test";
+    let limitation = String.fromCharCode(64);
+    let dotcom = "example.com";
+    let mail = "mailto:";
+    window.open(mail+recipient+limitation+dotcom);
+  });
+});
+
+
+//effect on images block 
+$(function() {
+  var rotation = 0;
+  var interval;
+  var animteImg = $('.animated-img');
+    
+  function animate(){
+    animteImg.css('transform', 'rotate(' + rotation + 'deg)');
+    rotation += 10;
+    rotation %= 360;
+  }
+
+  function startAnim(){
+    if(!interval){
+      interval = setInterval(animate, 50);
+    }
+  }
+
+  function stopAnim() {
+    clearInterval(interval);
+    interval = null;
+  }
+
+  $(document).scroll(startAnim).mouseup(stopAnim);
+
+})
+
+
+

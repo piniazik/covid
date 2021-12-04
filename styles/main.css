@@ -79,6 +79,29 @@ input {
   outline: none;
 }
 
+img {
+  vertical-align: middle;
+}
+
+.row.g_30 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.mt_30 {
+  margin-top: 30px;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.text-align-center {
+  text-align: center
+}
+
 /*header*/
 /*site loading*/
 .wrap-myLoader {
@@ -87,7 +110,10 @@ input {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: -o-linear-gradient(left, silver, #fe96c3);
+  background: -o-linear-gradient(left, silver, #fe96c3);
+  background: -webkit-gradient(linear, left top, right top, from(silver), to(#fe96c3));
+  background: linear-gradient(to right, silver, #fe96c3);
   z-index: 51;
   -webkit-transition: 1s all;
   -o-transition: 1s all;
@@ -103,42 +129,132 @@ input {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 76px;
-  height: 76px;
-  border: 10px solid #727272;
-  border-top-color: #F1CDB3;
   border-radius: 50%;
-  -webkit-animation: 3s myAnim linear infinite;
-  animation: 3s myAnim linear infinite;
 }
+
+.loader {
+  width: 16em;
+  height: 8em;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+
+.loader::before {
+  width: inherit;
+  height: 0.2em;
+  background-color: hsla(0, 0%, 85%);
+}
+
+.loader::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  height: inherit;
+  border: 0.2em solid hsla(0, 0%, 85%);
+  border-radius: 50%;
+  left: 25%;
+}
+
+.loader span {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 0.2em;
+  left: -5%;
+  -webkit-animation: 2s linear infinite;
+  animation: 2s linear infinite;
+  -webkit-transform-origin: 50% -3em;
+  -ms-transform-origin: 50% -3em;
+  transform-origin: 50% -3em;
+  -webkit-animation-name: run, rotating;
+  animation-name: run, rotating;
+}
+
+.loader span:nth-child(2) {
+  -webkit-animation-delay: 0.075s;
+  animation-delay: 0.075s;
+}
+
+.loader span:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    left: -5%;
+  }
+
+  10%,
+  60% {
+    left: calc((100% - 5%) / 2);
+  }
+
+  70%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes run {
+  0% {
+    left: -5%;
+  }
+
+  10%,
+  60% {
+    left: calc((100% - 5%) / 2);
+  }
+
+  70%,
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes rotating {
+
+  0%,
+  10% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  60%,
+  100% {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+@keyframes rotating {
+
+  0%,
+  10% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  60%,
+  100% {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
 
 .cansel {
   opacity: 0;
   visibility: hidden;
-}
-
-@-webkit-keyframes myAnim {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@keyframes myAnim {
-  from {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
 }
 
 /*site loading cansel*/
@@ -232,8 +348,9 @@ input {
   display: flex;
 }
 
-.header-images {
-  width: 36rem;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .nav-container {
@@ -377,6 +494,106 @@ input {
   background: #B22222;
 }
 
+/*popup*/
+
+.popup {
+  position: fixed;
+  width: 70%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 99999;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.close-popup {
+  position: absolute;
+  top: 11rem;
+  right: 20rem;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  z-index: 99999;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.close-popup:hover {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.close-popup:before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.close-popup:after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+.popup-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 2rem;
+}
+
+.box-popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  z-index: 99999;
+}
+
+.what-codid {
+  text-align: left;
+}
+
+video {
+  -o-object-fit: inherit;
+  object-fit: inherit;
+  margin-right: 1rem;
+}
+
 /*--------------------------------*/
 /*main*/
 /*about us*/
@@ -441,11 +658,13 @@ input {
   -webkit-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  border: none;
 }
 
 .about-us__btn:hover {
   background-color: #B22222;
   color: #fff;
+  cursor: pointer
 }
 
 /*contagion*/
@@ -508,7 +727,7 @@ input {
   font-family: "Gelion-Medium";
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 147%;
   text-transform: capitalize;
   color: #035755;
@@ -544,7 +763,7 @@ input {
   font-family: "Gelion-Medium";
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 147%;
   text-transform: capitalize;
   color: #035755;
@@ -580,7 +799,7 @@ input {
   font-family: "Gelion-Medium";
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 147%;
   text-transform: capitalize;
   color: #035755;
@@ -641,12 +860,8 @@ input {
   padding-right: 17rem;
 }
 
-.symptomps-images {
-  width: calc(100% - 10%);
-  padding-top: 5rem;
-  background-image: url(../images/BG.png);
-  background-repeat: no-repeat;
-  background-position: 8px 0px;
+.symptomps-image {
+  padding-top: 3rem;
 }
 
 /*what should we do*/
@@ -1162,17 +1377,177 @@ input {
   }
 }
 
+@media (max-width: 1399.98px) {
+
+  /*contagion*/
+  .contagion-objects__heading {
+    font-size: 30px;
+  }
+
+  .contagion-human__heading {
+    font-size: 30px;
+  }
+
+  .contagion-air__heading {
+    font-size: 30px;
+  }
+
+  .close-popup {
+    top: 7rem;
+    right: 15rem;
+  }
+
+  video {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+
+  /*live reports*/
+  .list-country {
+    font-size: 28px;
+  }
+
+  .close-popup {
+    top: 14rem;
+    right: 12rem;
+  }
+}
+
+@media screen and (min-width:1024px) and (max-height:1366px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .close-popup {
+    top: 11rem;
+    right: 15rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .heaer-heading {
+    font-size: 45px;
+  }
+
+  .header-description__word {
+    font-size: 25px;
+  }
+
+  .header-description__text {
+    font-size: 20px;
+  }
+
+  .btn-header {
+    font-size: 20px;
+  }
+
+  .about-us__modifier {
+    font-size: 25px;
+  }
+
+  .about-us__heading {
+    font-size: 45px;
+  }
+
+  .close-popup {
+    top: 11rem;
+    right: 9rem;
+  }
+
+  .contagion-modifier {
+    font-size: 25px;
+  }
+
+  .contagion-heading {
+    font-size: 45px;
+  }
+
+  .contagion-description {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .contagion-air {
+    margin-left: 3rem;
+  }
+
+  .contagion-human {
+    margin-left: 3rem;
+  }
+
+  .contagion-objects {
+    margin-left: 3rem;
+  }
+
+  .symptomps-modifier {
+    font-size: 25px;
+  }
+
+  .symptomps-heading {
+    font-size: 45px;
+  }
+
+  .symptomps-description {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .what-should__modifier {
+    font-size: 25px;
+  }
+
+  .what-should__heading {
+    font-size: 45px;
+  }
+
+  .what-should__description {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .live-reports__heading {
+    font-size: 45px;
+  }
+
+  .list-country {
+    font-size: 17px;
+  }
+
+  .subscribe-heading {
+    font-size: 45px;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .nav-container__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .nav-footer__social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+}
+
+
 /* Landscape phones and smaller */
-@media screen and (max-width: 480px) {
+@media (max-width: 575px) and (orientation: portrait) {
 
   /*header*/
-
   .header-description__word {
     font-size: 25px;
   }
 
   .heaer-heading {
     font-size: 35px;
+  }
+
+  .header-main__img {
+    padding-top: 5rem;
   }
 
   .header-description__text {
@@ -1233,9 +1608,9 @@ input {
 
   /*about us*/
   .about-us__modifier {
-      font-size: 25px;
+    font-size: 25px;
   }
-  
+
   .about-us_text {
     padding-top: 2rem;
     text-align: center;
@@ -1250,7 +1625,7 @@ input {
   }
 
   .about-us__description {
-     font-size: 18px;
+    font-size: 18px;
   }
 
   /*contagion*/
@@ -1262,7 +1637,7 @@ input {
   .contagion-heading {
     font-size: 35px;
   }
-  
+
   .contagion-central__part {
     padding-top: 5rem;
   }
@@ -1297,6 +1672,38 @@ input {
 
   .contagion-objects__heading {
     font-size: 30px;
+  }
+
+  .popup {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close-popup {
+    top: 1rem;
+    right: 2rem;
+  }
+
+  .title-popup {
+    font-size: 20px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .what-codid {
+    font-size: 16px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .images-popup {
+    max-width: 50%;
+  }
+
+  video {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin-top: 1rem;
   }
 
   /*symptomps*/
@@ -1458,7 +1865,7 @@ input {
   }
 
   /*subscribe*/
-  
+
   .subscribe-heading {
     padding-left: 0rem;
     padding-right: 0rem;
@@ -1470,7 +1877,7 @@ input {
   }
 
   .send-submit__btn {
-     font-size: 20px;
+    font-size: 20px;
   }
 
   .subscribe-form__wrapper {
@@ -1524,4 +1931,418 @@ input {
   .back_to_top {
     height: 48px;
   }
+}
+
+@media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
+
+  /*header*/
+  .header-description__word {
+    font-size: 25px;
+  }
+
+  .heaer-heading {
+    font-size: 35px;
+  }
+
+  .header-main__img {
+    padding-top: 5rem;
+  }
+
+  .header-description__text {
+    font-size: 18px;
+  }
+
+  .btn-header {
+    font-size: 20px;
+  }
+
+  .mobile_hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .header-main__text {
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .nav-main__item {
+    padding-top: 3rem;
+  }
+
+  .nav-main__link {
+    font-size: 2rem;
+    margin-right: 0rem;
+  }
+
+  .nav-main__btn {
+    margin-top: 3rem;
+  }
+
+  .header-images {
+    width: 100%;
+    padding-top: 3rem;
+    margin-left: -1rem;
+  }
+
+  .header-main {
+    background-position: 21rem 44rem, 14.7rem 3rem;
+  }
+
+  /*about us*/
+  .about-us__modifier {
+    font-size: 25px;
+  }
+
+  .about-us_text {
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .about-us__heading {
+    font-size: 35px;
+  }
+
+  .about-us__block {
+    background-position: 5rem 31rem, 33rem 33rem;
+  }
+
+  .about-us__description {
+    font-size: 16px;
+  }
+
+  /*contagion*/
+
+  .contagion-modifier {
+    font-size: 25px;
+  }
+
+  .contagion-heading {
+    font-size: 35px;
+  }
+
+  .contagion-central__part {
+    padding-top: 5rem;
+  }
+
+  .contagion-description {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .contagion-air {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .contagion-human {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .contagion-objects {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .contagion-air__heading {
+    font-size: 20px;
+  }
+
+  .contagion-human__heading {
+    font-size: 20px;
+  }
+
+  .contagion-objects__heading {
+    font-size: 20px;
+  }
+
+  .contagion-objects__description {
+    font-size: 16px;
+  }
+
+  .contagion-human__description {
+    font-size: 16px;
+  }
+
+  .contagion-air__description {
+    font-size: 16px;
+  }
+
+  .popup {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close-popup {
+    top: 1rem;
+    right: 2rem;
+  }
+
+  .title-popup {
+    font-size: 20px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .what-codid {
+    font-size: 16px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .images-popup {
+    max-width: 50%;
+  }
+
+  video {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin-top: 1rem;
+  }
+
+  /*symptomps*/
+  .symptomps-central__part {
+    padding-top: 5rem;
+  }
+
+  .symptomps-modifier {
+    font-size: 25px;
+  }
+
+  .symptomps-heading {
+    font-size: 35px;
+  }
+
+  .symptomps-description {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .symptomps-images {
+    width: calc(100% - 10%);
+  }
+
+  /*what should we do*/
+  .what-should__block {
+    padding-top: 5rem;
+    background-position: 0px 82rem, 15rem 83rem, 33rem 205rem;
+  }
+
+  .what-should__modifier {
+    font-size: 25px;
+  }
+
+  .what-should__heading {
+    font-size: 35px;
+  }
+
+  .what-should__description {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .wear-mask__heading {
+    font-size: 35px;
+  }
+
+  .wash-hands__heading {
+    font-size: 35px;
+  }
+
+  .use-nose__heading {
+    font-size: 35px;
+  }
+
+  .avoid-contact__heading {
+    font-size: 35px;
+  }
+
+  .what-should__container {
+    display: block;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .wear-mask__icon {
+    height: 11%;
+    margin-left: 10px;
+  }
+
+  .wash-hands__icon {
+    height: 11%;
+    margin-left: 10px;
+  }
+
+  .use-nose__icon {
+    height: 11%;
+    margin-left: 10px;
+  }
+
+  .avoid-contact__icon {
+    height: auto;
+    margin-left: 10px;
+  }
+
+  .wear-mask__text {
+    text-align: center;
+  }
+
+  .wear-mask__heading {
+    text-align: center;
+  }
+
+  .wash-hands__heading {
+    text-align: center;
+  }
+
+  .wash-hands__text {
+    text-align: center;
+  }
+
+  .use-nose__heading {
+    text-align: center;
+  }
+
+  .use-nose__text {
+    text-align: center;
+  }
+
+  .avoid-contact__heading {
+    text-align: center;
+  }
+
+  .avoid-contact__text {
+    text-align: center;
+  }
+
+  /*map*/
+  .map-block {
+    padding-top: 0rem;
+  }
+
+  .map-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .map-images__group {
+    width: 78%;
+    padding-top: 4rem;
+  }
+
+  #map {
+    width: 90%;
+    height: 60%;
+  }
+
+  .mobile-none {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .mobile-visible {
+    display: none;
+  }
+
+  .list-country {
+    font-size: 15px;
+  }
+
+  .live-reports__heading {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  /*subscribe*/
+
+  .subscribe-heading {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 35px;
+  }
+
+  .subscribe-block {
+    padding-top: 15rem;
+  }
+
+  .send-submit__btn {
+    font-size: 20px;
+  }
+
+  .subscribe-form__wrapper {
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+
+  .subscribee-mail {
+    width: 10.5rem;
+    border-radius: 57px;
+  }
+
+  .form-main__send {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .footer-wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .nav-footer {
+    -webkit-padding-start: 0px;
+    padding-inline-start: 0px;
+    margin-left: 0rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .nav-footer__item {
+    margin-top: 0.5rem;
+  }
+
+  .nav-container__footer {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .author-wrapper {
+    margin-left: 2rem;
+  }
+
+  .back_to_top {
+    height: 48px;
+  }
+
 }
