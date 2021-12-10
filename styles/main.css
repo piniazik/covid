@@ -498,8 +498,78 @@ body {
   background: #B22222;
 }
 
-/*popup*/
+/*modal window*/
+#bg-popup {
+  position: fixed;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
 
+#popups {
+  background: #fff;
+  width: 550px;
+  margin: 12% auto;
+  position: relative;
+  padding: 1rem;
+}
+
+.popups-list {
+  padding: 1rem;
+}
+
+.popups-heading {
+   font-family: "RedHatDisplay-Black";
+   font-style: normal;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 122%;
+   color: #035755;
+   text-align: center;
+}
+
+.popups-description {
+   font-family: "RedHatDisplay-Black";
+   font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   line-height: 122%;
+   color: #035755;
+}
+
+.popups-item {
+  font-family: "Gelion-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 215%;
+  text-transform: capitalize;
+  color: #4B4F51;
+}
+
+
+a.close {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+a.close:hover {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*popup*/
 .popup {
   position: fixed;
   width: 70%;
@@ -1384,6 +1454,10 @@ video {
 
 @media (max-width: 1399.98px) {
 
+#popups {
+  margin: 3% auto;
+}
+
   /*contagion*/
   .contagion-objects__heading {
     font-size: 30px;
@@ -1425,9 +1499,16 @@ video {
     top: 11rem;
     right: 15rem;
   }
+  #popups {
+    margin: 40% auto;
+  }
 }
 
 @media (max-width: 991.98px) {
+  #popups {
+    margin: 32% auto;
+  }
+
   .heaer-heading {
     font-size: 45px;
   }
@@ -1538,10 +1619,17 @@ video {
 
 }
 
-
 /* Landscape phones and smaller */
 @media (max-width: 575px) and (orientation: portrait) {
+  #popups {
+    margin: 3% auto;
+    width: 315px;
+  }
 
+  .popups-item {
+    font-size: 13px;
+  }
+  
   /*header*/
   .header-description__word {
     font-size: 25px;
