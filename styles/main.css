@@ -2028,11 +2028,17 @@ video {
 
   .back_to_top {
     height: 48px;
+    bottom: 253px;
   }
 }
 
 @media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
-
+  .popups-item {
+    font-size: 12px;
+  }
+  #popups {
+    margin: 0% auto;
+  }
   /*header*/
   .header-description__word {
     font-size: 25px;
